@@ -16,7 +16,7 @@ namespace Phys_Math
             InitializeComponent();
         }
 
-        private void Res_B_Click(object sender, EventArgs e)
+        private void Res_B_Click(object sender, EventArgs e)                            //Подсчёт Площади и Объёма
         {
             try
             {
@@ -31,6 +31,20 @@ namespace Phys_Math
             {
                 Area_TB.Text = "Ошибка ввода";
                 Volume_TB.Text = "Ошибка ввода";
+            }
+        }
+
+        private void Res_B2_Click(object sender, EventArgs e)                           //Нахождение Массы
+        {
+            try
+            {
+                int D1 = Convert.ToInt32(Density_TB1.Text);
+                int V = Convert.ToInt32(Volume_TB.Text);
+                int W1 = D1 * V;
+                Weight_TB1.Text = Convert.ToString(W1);
+            } catch (FormatException)
+            {
+                Weight_TB1.Text = "Ошибка ввода";
             }
         }
     }

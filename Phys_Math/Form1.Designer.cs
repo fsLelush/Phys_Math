@@ -39,6 +39,15 @@
             this.Area_TB = new System.Windows.Forms.TextBox();
             this.Volume_TB = new System.Windows.Forms.TextBox();
             this.Res_B = new System.Windows.Forms.Button();
+            this.Density_LB1 = new System.Windows.Forms.Label();
+            this.Density_LB2 = new System.Windows.Forms.Label();
+            this.Weight_LB1 = new System.Windows.Forms.Label();
+            this.Weight_LB2 = new System.Windows.Forms.Label();
+            this.Density_TB1 = new System.Windows.Forms.TextBox();
+            this.Density_TB2 = new System.Windows.Forms.TextBox();
+            this.Weight_TB1 = new System.Windows.Forms.TextBox();
+            this.Weight_TB2 = new System.Windows.Forms.TextBox();
+            this.Res_B2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Length_L
@@ -133,11 +142,94 @@
             this.Res_B.UseVisualStyleBackColor = true;
             this.Res_B.Click += new System.EventHandler(this.Res_B_Click);
             // 
+            // Density_LB1
+            // 
+            this.Density_LB1.AutoSize = true;
+            this.Density_LB1.Location = new System.Drawing.Point(485, 30);
+            this.Density_LB1.Name = "Density_LB1";
+            this.Density_LB1.Size = new System.Drawing.Size(70, 13);
+            this.Density_LB1.TabIndex = 11;
+            this.Density_LB1.Text = "Плотность 1";
+            // 
+            // Density_LB2
+            // 
+            this.Density_LB2.AutoSize = true;
+            this.Density_LB2.Location = new System.Drawing.Point(610, 30);
+            this.Density_LB2.Name = "Density_LB2";
+            this.Density_LB2.Size = new System.Drawing.Size(70, 13);
+            this.Density_LB2.TabIndex = 12;
+            this.Density_LB2.Text = "Плотность 2";
+            // 
+            // Weight_LB1
+            // 
+            this.Weight_LB1.AutoSize = true;
+            this.Weight_LB1.Location = new System.Drawing.Point(497, 167);
+            this.Weight_LB1.Name = "Weight_LB1";
+            this.Weight_LB1.Size = new System.Drawing.Size(49, 13);
+            this.Weight_LB1.TabIndex = 13;
+            this.Weight_LB1.Text = "Масса 1";
+            // 
+            // Weight_LB2
+            // 
+            this.Weight_LB2.AutoSize = true;
+            this.Weight_LB2.Location = new System.Drawing.Point(631, 167);
+            this.Weight_LB2.Name = "Weight_LB2";
+            this.Weight_LB2.Size = new System.Drawing.Size(49, 13);
+            this.Weight_LB2.TabIndex = 14;
+            this.Weight_LB2.Text = "Масса 2";
+            // 
+            // Density_TB1
+            // 
+            this.Density_TB1.Location = new System.Drawing.Point(470, 60);
+            this.Density_TB1.Name = "Density_TB1";
+            this.Density_TB1.Size = new System.Drawing.Size(100, 20);
+            this.Density_TB1.TabIndex = 15;
+            // 
+            // Density_TB2
+            // 
+            this.Density_TB2.Location = new System.Drawing.Point(606, 60);
+            this.Density_TB2.Name = "Density_TB2";
+            this.Density_TB2.Size = new System.Drawing.Size(100, 20);
+            this.Density_TB2.TabIndex = 16;
+            // 
+            // Weight_TB1
+            // 
+            this.Weight_TB1.Location = new System.Drawing.Point(470, 198);
+            this.Weight_TB1.Name = "Weight_TB1";
+            this.Weight_TB1.Size = new System.Drawing.Size(100, 20);
+            this.Weight_TB1.TabIndex = 17;
+            // 
+            // Weight_TB2
+            // 
+            this.Weight_TB2.Location = new System.Drawing.Point(606, 198);
+            this.Weight_TB2.Name = "Weight_TB2";
+            this.Weight_TB2.Size = new System.Drawing.Size(100, 20);
+            this.Weight_TB2.TabIndex = 18;
+            // 
+            // Res_B2
+            // 
+            this.Res_B2.Location = new System.Drawing.Point(549, 125);
+            this.Res_B2.Name = "Res_B2";
+            this.Res_B2.Size = new System.Drawing.Size(75, 23);
+            this.Res_B2.TabIndex = 19;
+            this.Res_B2.Text = "Посчитать";
+            this.Res_B2.UseVisualStyleBackColor = true;
+            this.Res_B2.Click += new System.EventHandler(this.Res_B2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 308);
+            this.ClientSize = new System.Drawing.Size(769, 352);
+            this.Controls.Add(this.Res_B2);
+            this.Controls.Add(this.Weight_TB2);
+            this.Controls.Add(this.Weight_TB1);
+            this.Controls.Add(this.Density_TB2);
+            this.Controls.Add(this.Density_TB1);
+            this.Controls.Add(this.Weight_LB2);
+            this.Controls.Add(this.Weight_LB1);
+            this.Controls.Add(this.Density_LB2);
+            this.Controls.Add(this.Density_LB1);
             this.Controls.Add(this.Res_B);
             this.Controls.Add(this.Volume_TB);
             this.Controls.Add(this.Area_TB);
@@ -169,6 +261,15 @@
         private System.Windows.Forms.TextBox Area_TB;
         private System.Windows.Forms.TextBox Volume_TB;
         private System.Windows.Forms.Button Res_B;
+        private System.Windows.Forms.Label Density_LB1;
+        private System.Windows.Forms.Label Density_LB2;
+        private System.Windows.Forms.Label Weight_LB1;
+        private System.Windows.Forms.Label Weight_LB2;
+        private System.Windows.Forms.TextBox Density_TB1;
+        private System.Windows.Forms.TextBox Density_TB2;
+        private System.Windows.Forms.TextBox Weight_TB1;
+        private System.Windows.Forms.TextBox Weight_TB2;
+        private System.Windows.Forms.Button Res_B2;
     }
 }
 
