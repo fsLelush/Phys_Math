@@ -111,6 +111,7 @@
             // 
             this.Area_TB.Location = new System.Drawing.Point(56, 198);
             this.Area_TB.Name = "Area_TB";
+            this.Area_TB.ReadOnly = true;
             this.Area_TB.Size = new System.Drawing.Size(100, 20);
             this.Area_TB.TabIndex = 8;
             // 
@@ -118,6 +119,7 @@
             // 
             this.Volume_TB.Location = new System.Drawing.Point(187, 198);
             this.Volume_TB.Name = "Volume_TB";
+            this.Volume_TB.ReadOnly = true;
             this.Volume_TB.Size = new System.Drawing.Size(100, 20);
             this.Volume_TB.TabIndex = 9;
             // 
@@ -129,6 +131,7 @@
             this.Res_B.TabIndex = 10;
             this.Res_B.Text = "Посчитать";
             this.Res_B.UseVisualStyleBackColor = true;
+            this.Res_B.Click += new System.EventHandler(this.Res_B_Click);
             // 
             // Form1
             // 
