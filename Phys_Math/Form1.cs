@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Phys_Math
@@ -22,16 +16,16 @@ namespace Phys_Math
             S = 8;
             D1 = 10;
             try
-            {           
+            {
                 int H = Convert.ToInt32(Height_TB1.Text);
                 int V = S * H;
-                Volume_TB.Text = Convert.ToString(V);                                   //Подсчёт Объёма 
+                Volume_TB.Text = Convert.ToString(V);                                   //Подсчёт Объёма
 
                 int W1 = D1 * V;
                 int W2 = W1;
                 Weight_TB.Text = Convert.ToString(W1);                                 //Нахождение Массы
-
-            } catch (FormatException)
+            }
+            catch (FormatException)
             {
                 Volume_TB.Text = "Ошибка ввода";
                 Weight_TB.Text = "Ошибка ввода";
@@ -48,7 +42,8 @@ namespace Phys_Math
                 int V2 = W / D2;
                 int H = V2 / S;
                 Height_TB2.Text = Convert.ToString(H);
-            } catch (FormatException)
+            }
+            catch (FormatException)
             {
                 Height_TB2.Text = "Ошибка ввода";
             }
