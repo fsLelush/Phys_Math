@@ -30,12 +30,12 @@
         {
             this.Length_L = new System.Windows.Forms.Label();
             this.Width_L = new System.Windows.Forms.Label();
-            this.Height_L = new System.Windows.Forms.Label();
+            this.Height_L1 = new System.Windows.Forms.Label();
             this.Area_L = new System.Windows.Forms.Label();
             this.Volume_L = new System.Windows.Forms.Label();
             this.Length_TB = new System.Windows.Forms.TextBox();
             this.Width_TB = new System.Windows.Forms.TextBox();
-            this.Height_TB = new System.Windows.Forms.TextBox();
+            this.Height_TB1 = new System.Windows.Forms.TextBox();
             this.Area_TB = new System.Windows.Forms.TextBox();
             this.Volume_TB = new System.Windows.Forms.TextBox();
             this.Res_B = new System.Windows.Forms.Button();
@@ -48,6 +48,8 @@
             this.Weight_TB1 = new System.Windows.Forms.TextBox();
             this.Weight_TB2 = new System.Windows.Forms.TextBox();
             this.Res_B2 = new System.Windows.Forms.Button();
+            this.Height_TB2 = new System.Windows.Forms.TextBox();
+            this.Height_L2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Length_L
@@ -68,14 +70,14 @@
             this.Width_L.TabIndex = 1;
             this.Width_L.Text = "Ширина";
             // 
-            // Height_L
+            // Height_L1
             // 
-            this.Height_L.AutoSize = true;
-            this.Height_L.Location = new System.Drawing.Point(275, 30);
-            this.Height_L.Name = "Height_L";
-            this.Height_L.Size = new System.Drawing.Size(45, 13);
-            this.Height_L.TabIndex = 2;
-            this.Height_L.Text = "Высота";
+            this.Height_L1.AutoSize = true;
+            this.Height_L1.Location = new System.Drawing.Point(275, 30);
+            this.Height_L1.Name = "Height_L1";
+            this.Height_L1.Size = new System.Drawing.Size(45, 13);
+            this.Height_L1.TabIndex = 2;
+            this.Height_L1.Text = "Высота";
             // 
             // Area_L
             // 
@@ -99,22 +101,28 @@
             // 
             this.Length_TB.Location = new System.Drawing.Point(12, 60);
             this.Length_TB.Name = "Length_TB";
+            this.Length_TB.ReadOnly = true;
             this.Length_TB.Size = new System.Drawing.Size(100, 20);
             this.Length_TB.TabIndex = 5;
+            this.Length_TB.TabStop = false;
+            this.Length_TB.Text = "2";
             // 
             // Width_TB
             // 
             this.Width_TB.Location = new System.Drawing.Point(123, 60);
             this.Width_TB.Name = "Width_TB";
+            this.Width_TB.ReadOnly = true;
             this.Width_TB.Size = new System.Drawing.Size(100, 20);
             this.Width_TB.TabIndex = 6;
+            this.Width_TB.TabStop = false;
+            this.Width_TB.Text = "4";
             // 
-            // Height_TB
+            // Height_TB1
             // 
-            this.Height_TB.Location = new System.Drawing.Point(245, 60);
-            this.Height_TB.Name = "Height_TB";
-            this.Height_TB.Size = new System.Drawing.Size(100, 20);
-            this.Height_TB.TabIndex = 7;
+            this.Height_TB1.Location = new System.Drawing.Point(245, 60);
+            this.Height_TB1.Name = "Height_TB1";
+            this.Height_TB1.Size = new System.Drawing.Size(100, 20);
+            this.Height_TB1.TabIndex = 7;
             // 
             // Area_TB
             // 
@@ -123,6 +131,8 @@
             this.Area_TB.ReadOnly = true;
             this.Area_TB.Size = new System.Drawing.Size(100, 20);
             this.Area_TB.TabIndex = 8;
+            this.Area_TB.TabStop = false;
+            this.Area_TB.Text = "8";
             // 
             // Volume_TB
             // 
@@ -145,7 +155,7 @@
             // Density_LB1
             // 
             this.Density_LB1.AutoSize = true;
-            this.Density_LB1.Location = new System.Drawing.Point(485, 30);
+            this.Density_LB1.Location = new System.Drawing.Point(443, 30);
             this.Density_LB1.Name = "Density_LB1";
             this.Density_LB1.Size = new System.Drawing.Size(70, 13);
             this.Density_LB1.TabIndex = 11;
@@ -154,7 +164,7 @@
             // Density_LB2
             // 
             this.Density_LB2.AutoSize = true;
-            this.Density_LB2.Location = new System.Drawing.Point(610, 30);
+            this.Density_LB2.Location = new System.Drawing.Point(644, 30);
             this.Density_LB2.Name = "Density_LB2";
             this.Density_LB2.Size = new System.Drawing.Size(70, 13);
             this.Density_LB2.TabIndex = 12;
@@ -163,7 +173,7 @@
             // Weight_LB1
             // 
             this.Weight_LB1.AutoSize = true;
-            this.Weight_LB1.Location = new System.Drawing.Point(497, 167);
+            this.Weight_LB1.Location = new System.Drawing.Point(399, 167);
             this.Weight_LB1.Name = "Weight_LB1";
             this.Weight_LB1.Size = new System.Drawing.Size(49, 13);
             this.Weight_LB1.TabIndex = 13;
@@ -172,7 +182,7 @@
             // Weight_LB2
             // 
             this.Weight_LB2.AutoSize = true;
-            this.Weight_LB2.Location = new System.Drawing.Point(631, 167);
+            this.Weight_LB2.Location = new System.Drawing.Point(514, 167);
             this.Weight_LB2.Name = "Weight_LB2";
             this.Weight_LB2.Size = new System.Drawing.Size(49, 13);
             this.Weight_LB2.TabIndex = 14;
@@ -180,35 +190,40 @@
             // 
             // Density_TB1
             // 
-            this.Density_TB1.Location = new System.Drawing.Point(470, 60);
+            this.Density_TB1.Location = new System.Drawing.Point(425, 60);
             this.Density_TB1.Name = "Density_TB1";
+            this.Density_TB1.ReadOnly = true;
             this.Density_TB1.Size = new System.Drawing.Size(100, 20);
             this.Density_TB1.TabIndex = 15;
+            this.Density_TB1.TabStop = false;
+            this.Density_TB1.Text = "10";
             // 
             // Density_TB2
             // 
-            this.Density_TB2.Location = new System.Drawing.Point(606, 60);
+            this.Density_TB2.Location = new System.Drawing.Point(638, 60);
             this.Density_TB2.Name = "Density_TB2";
             this.Density_TB2.Size = new System.Drawing.Size(100, 20);
             this.Density_TB2.TabIndex = 16;
             // 
             // Weight_TB1
             // 
-            this.Weight_TB1.Location = new System.Drawing.Point(470, 198);
+            this.Weight_TB1.Location = new System.Drawing.Point(372, 198);
             this.Weight_TB1.Name = "Weight_TB1";
             this.Weight_TB1.Size = new System.Drawing.Size(100, 20);
             this.Weight_TB1.TabIndex = 17;
             // 
             // Weight_TB2
             // 
-            this.Weight_TB2.Location = new System.Drawing.Point(606, 198);
+            this.Weight_TB2.Location = new System.Drawing.Point(488, 198);
             this.Weight_TB2.Name = "Weight_TB2";
+            this.Weight_TB2.ReadOnly = true;
             this.Weight_TB2.Size = new System.Drawing.Size(100, 20);
             this.Weight_TB2.TabIndex = 18;
+            this.Weight_TB2.TabStop = false;
             // 
             // Res_B2
             // 
-            this.Res_B2.Location = new System.Drawing.Point(549, 125);
+            this.Res_B2.Location = new System.Drawing.Point(647, 125);
             this.Res_B2.Name = "Res_B2";
             this.Res_B2.Size = new System.Drawing.Size(75, 23);
             this.Res_B2.TabIndex = 19;
@@ -216,11 +231,31 @@
             this.Res_B2.UseVisualStyleBackColor = true;
             this.Res_B2.Click += new System.EventHandler(this.Res_B2_Click);
             // 
+            // Height_TB2
+            // 
+            this.Height_TB2.Location = new System.Drawing.Point(638, 198);
+            this.Height_TB2.Name = "Height_TB2";
+            this.Height_TB2.ReadOnly = true;
+            this.Height_TB2.Size = new System.Drawing.Size(100, 20);
+            this.Height_TB2.TabIndex = 20;
+            this.Height_TB2.TabStop = false;
+            // 
+            // Height_L2
+            // 
+            this.Height_L2.AutoSize = true;
+            this.Height_L2.Location = new System.Drawing.Point(660, 167);
+            this.Height_L2.Name = "Height_L2";
+            this.Height_L2.Size = new System.Drawing.Size(54, 13);
+            this.Height_L2.TabIndex = 21;
+            this.Height_L2.Text = "Высота 2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 352);
+            this.Controls.Add(this.Height_L2);
+            this.Controls.Add(this.Height_TB2);
             this.Controls.Add(this.Res_B2);
             this.Controls.Add(this.Weight_TB2);
             this.Controls.Add(this.Weight_TB1);
@@ -233,12 +268,12 @@
             this.Controls.Add(this.Res_B);
             this.Controls.Add(this.Volume_TB);
             this.Controls.Add(this.Area_TB);
-            this.Controls.Add(this.Height_TB);
+            this.Controls.Add(this.Height_TB1);
             this.Controls.Add(this.Width_TB);
             this.Controls.Add(this.Length_TB);
             this.Controls.Add(this.Volume_L);
             this.Controls.Add(this.Area_L);
-            this.Controls.Add(this.Height_L);
+            this.Controls.Add(this.Height_L1);
             this.Controls.Add(this.Width_L);
             this.Controls.Add(this.Length_L);
             this.Name = "Form1";
@@ -252,12 +287,12 @@
 
         private System.Windows.Forms.Label Length_L;
         private System.Windows.Forms.Label Width_L;
-        private System.Windows.Forms.Label Height_L;
+        private System.Windows.Forms.Label Height_L1;
         private System.Windows.Forms.Label Area_L;
         private System.Windows.Forms.Label Volume_L;
         private System.Windows.Forms.TextBox Length_TB;
         private System.Windows.Forms.TextBox Width_TB;
-        private System.Windows.Forms.TextBox Height_TB;
+        private System.Windows.Forms.TextBox Height_TB1;
         private System.Windows.Forms.TextBox Area_TB;
         private System.Windows.Forms.TextBox Volume_TB;
         private System.Windows.Forms.Button Res_B;
@@ -270,6 +305,8 @@
         private System.Windows.Forms.TextBox Weight_TB1;
         private System.Windows.Forms.TextBox Weight_TB2;
         private System.Windows.Forms.Button Res_B2;
+        private System.Windows.Forms.TextBox Height_TB2;
+        private System.Windows.Forms.Label Height_L2;
     }
 }
 

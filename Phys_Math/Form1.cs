@@ -16,35 +16,43 @@ namespace Phys_Math
             InitializeComponent();
         }
 
-        private void Res_B_Click(object sender, EventArgs e)                            //Подсчёт Площади и Объёма
+        private void Res_B_Click(object sender, EventArgs e)
         {
+            int S, D1;
+            S = 8;
+            D1 = 10;
             try
-            {
-                int L = Convert.ToInt32(Length_TB.Text);
-                int W = Convert.ToInt32(Width_TB.Text);
-                int S = L * W;
-                int H = Convert.ToInt32(Height_TB.Text);
+            {           
+                int H = Convert.ToInt32(Height_TB1.Text);
                 int V = S * H;
-                Area_TB.Text = Convert.ToString(S);
-                Volume_TB.Text = Convert.ToString(V);
+                Volume_TB.Text = Convert.ToString(V);                                   //Подсчёт Объёма 
+
+                int W1 = D1 * V;
+                int W2 = W1;
+                Weight_TB1.Text = Convert.ToString(W1);                                 //Нахождение массы
+                Weight_TB2.Text = Convert.ToString(W2);
+
             } catch (FormatException)
             {
-                Area_TB.Text = "Ошибка ввода";
                 Volume_TB.Text = "Ошибка ввода";
+                Weight_TB1.Text = "Ошибка ввода";
+                Weight_TB2.Text = "Ошибка ввода";
             }
         }
 
-        private void Res_B2_Click(object sender, EventArgs e)                           //Нахождение Массы
+        private void Res_B2_Click(object sender, EventArgs e)                           
         {
             try
             {
-                int D1 = Convert.ToInt32(Density_TB1.Text);
-                int V = Convert.ToInt32(Volume_TB.Text);
-                int W1 = D1 * V;
-                Weight_TB1.Text = Convert.ToString(W1);
+                int D2 = Convert.ToInt32(Density_TB2.Text);
+                int W2 = Convert.ToInt32(Weight_TB2.Text);
+                int S = Convert.ToInt32(Area_TB.Text);
+                int V2 = W2 / D2;
+                int H = V2 / S;
+                Height_TB2.Text = Convert.ToString(H);
             } catch (FormatException)
             {
-                Weight_TB1.Text = "Ошибка ввода";
+                Height_TB2.Text = "Ошибка ввода";
             }
         }
     }
