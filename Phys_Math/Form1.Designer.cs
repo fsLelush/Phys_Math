@@ -199,8 +199,10 @@
             // 
             this.Weight_TB.Location = new System.Drawing.Point(245, 267);
             this.Weight_TB.Name = "Weight_TB";
+            this.Weight_TB.ReadOnly = true;
             this.Weight_TB.Size = new System.Drawing.Size(100, 20);
             this.Weight_TB.TabIndex = 17;
+            this.Weight_TB.TabStop = false;
             // 
             // Res_B2
             // 
